@@ -7,7 +7,6 @@ import random
 import re
 import time
 import os
-from keep_alive import keep_alive
 
 intents = discord.Intents.default()
 intents.message_content = True
@@ -677,5 +676,4 @@ async def on_member_remove(member):
             embed.set_footer(text=f"ᴍᴇᴍʙᴇʀ ᴄᴏᴜɴᴛ: {human_count}")
             await leave_channel.send(embed=embed)
 
-keep_alive()
 bot.run(os.environ['BOT_TOKEN'])
